@@ -41,6 +41,9 @@ var visualRecognition = new watson.VisualRecognitionV3({
   version_date: '2015-05-19'
 });
 
+
+
+
 app.get('/', function(req, res) {
   res.render('use');
 });
@@ -230,10 +233,16 @@ function parseBase64Image(imageString) {
  *                     images/test.jpg or https://example.com/test.jpg
  * @param req.file The image file.
  */
+
+
 app.post('/api/classify', app.upload.single('images_file'), function(req, res) {
+console.log('ENTRATO /api/classify:',req.body.classifier_id);
+ 
+ 
   var params = {
     url: null,
-    images_file: null
+    images_file: null,
+   
   };
 
   if (req.file) { // file image
@@ -258,6 +267,8 @@ app.post('/api/classify', app.upload.single('images_file'), function(req, res) {
     delete params.images_file;
   }
   var methods = [];
+  req.body.classifier_id="DiseaseSymptons_105487933";
+  console.log("CLASSIFIER:",req.body.classifier_id);
   if (req.body.classifier_id || process.env.OVERRIDE_CLASSIFIER_ID) {
     params.classifier_ids = req.body.classifier_id ? [req.body.classifier_id] : [process.env.OVERRIDE_CLASSIFIER_ID];
     methods.push('classify');
