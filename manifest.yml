@@ -4,11 +4,11 @@ declared-services:
     label: watson_vision_combined
     plan: free
 applications:
-- name: visual-recognition-demo
+- name: plantDiseaseSymptoms-vr-demo
   path: .
   command: npm start
   memory: 512M
   services:
-  - visual-recognition-service
+  - Disease-Symptoms-Visual-Recognition 
   env:
     NODE_ENV: production
