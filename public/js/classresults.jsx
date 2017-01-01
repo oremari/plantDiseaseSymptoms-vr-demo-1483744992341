@@ -109,6 +109,7 @@ class CorrectForm extends React.Component {
     return (<tr className="base--tr">
       <td className="base--td" colSpan="2">
         <hr/>
+       {/*  Commented by Oreste
         <div className="correctForm">
           <h3 className="iscorrect base--h3">Is this correct?</h3>
           <div className="correctButtons">
@@ -118,7 +119,8 @@ class CorrectForm extends React.Component {
           </div>
           <hr/>
           {this.choosePanel()}
-        </div>
+        </div> 
+         */} 
         </td>
       </tr>);
   }
