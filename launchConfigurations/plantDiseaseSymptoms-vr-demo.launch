@@ -8,7 +8,7 @@
     },
     "Name": "plantDiseaseSymptoms-vr-demo",
     "Instrumentation": {
-      "host": "plantDiseaseSymptoms-vr-demo",
+      "host": "plantdiseasesymptoms-vr-demo",
       "domain": "mybluemix.net"
     }
   },
