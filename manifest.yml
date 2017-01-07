@@ -7,7 +7,7 @@ applications:
 - name: plantDiseaseSymptoms-vr-demo
   path: .
   command: npm start
-  memory: 512M
+  memory: 256M
   services:
   - Disease-Symptoms-Visual-Recognition 
   env:
