@@ -5,6 +5,7 @@ declared-services:
     plan: free
 applications:
 - name: plantDiseaseSymptoms-vr-demo
+  host: plantdiseasesymptoms-vr-demo
   path: .
   command: npm start
   memory: 256M
